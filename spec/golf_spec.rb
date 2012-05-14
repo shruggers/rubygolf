@@ -47,7 +47,7 @@ describe "Golf" do
       Golf.hole4('I').should == 1
     end
     it "converts V to 5" do
-      Golf.hole4('V').should == 1
+      Golf.hole4('V').should == 5
     end
     it "converts X to 10" do
       Golf.hole4('X').should == 10
