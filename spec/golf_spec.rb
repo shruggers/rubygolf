@@ -109,7 +109,7 @@ describe "Golf" do
       Golf.hole7([2, 3, 5, 4, 1, 6, 8, 0, 3 , 6, 2, 4, 5, 1, 4, 1, 7, 1, 5, 2]).should == 70
     end
     it "scores a game of bowling with spares" do
-      Golf.hole7([2, 8, 5, 4, 1, 6, 8, 0, 3 , 6, 2, 4, 5, 1, 4, 1, 7, 1, 5, 2]).should == 75
+      Golf.hole7([2, 8, 5, 4, 1, 6, 8, 0, 3 , 6, 2, 4, 5, 1, 4, 1, 7, 1, 5, 2]).should == 80
     end
     it "scores a game of bowling with strikes" do
       Golf.hole7([2, 3, 5, 4, 1, 6, 8, 0, 3 , 6, 2, 4, 5, 1, 4, 1, 10, 5, 2]).should == 79
