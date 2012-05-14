@@ -38,7 +38,7 @@ describe "Golf" do
       Golf.hole3('fixtures/grid-2.txt').should == 698
     end
     it "sums each row and each column and finds the maximum" do
-      Golf.hole3('fixtures/grid-2.txt').should == 650
+      Golf.hole3('fixtures/grid-3.txt').should == 650
     end
   end
 
