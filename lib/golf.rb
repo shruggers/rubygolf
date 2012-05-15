@@ -1,2 +1,5 @@
 class Golf
+class<<self
+i=0;[->(s,a){a.scan(/#{s}/i).size},->(s,n){z=('a'..'z').to_a;s.split(//).map{|c|c==' '?' ':z[(z.index(c)+n)%26]}.join},->(f){r=File.read(f).split("\n").map{|r|r.split.map(&:to_i)};(r+r.transpose).map{|a|a.inject:+}.max},->(s){a=0;{XL:40,IX:9,IV:4,L:50,X:10,V:5,I:1}.map{|r,v|a+=hole1(r,s)*v;s.sub!(r.to_s,'')};a},->(s){t,a=s.size,[];(0..t-2).map{|i|(i+1..t-1).map{|j|c=s[i..j];c==c.reverse&&a<<c}};a},->(s){r=[];s.split.map{|c|c=~/\d/?(r<<c):((i,j=r.pop,r.pop)&&r<<(eval"#{j}#{c}#{i}"))};r[0]},->(a){s=0;10.times{s+=(b=a.shift)+(b==10?a[0]+a[1]:(c=a.shift)+(b+c==10?a[0]:0))};s},->(){(u=%w(one two three four five six seven eight nine))+%w(ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen)+%w(twenty thirty forty fifty sixty seventy eighty ninety).map{|n|[n]+u.map{|i|n+' '+i}}.flatten+['one hundred']},->(n){(1..n).map{|i|i%15==0&&'fizzbuzz'||i%3==0&&'fizz'||i%5==0&&'buzz'||i}}].map{|m|define_method"hole#{i+=1}",&m}
+end
 end
